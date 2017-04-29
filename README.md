@@ -13,6 +13,8 @@ The codes have been written in Python 3.4.3
 
 A free Android app called 'IPWebcam' has been used to capture images. IPWebcam captures images via the mobile camera and sends them as a bytestream to requesting device.
 
+NumPy version 1.11.2 for matrix computations.
+
 Pillow version 3.4.2 for handling images.
 
 urllib for connection to the mobile (IPWebcam) via WiFi. 
