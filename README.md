@@ -39,3 +39,5 @@ Codes:
 	2. nnClass1.py contains the NN class, wg\hich contains the functions sigmoid, lossFunc, initWeights, trainNN, forwadPass.
 3. Driving:
 	1. usingBluetooth contains the code for autonomous driving using Bluetooth. It imports the class NN from nnClass1.py and uses the 				 function forwardPass to get the output class.
+
+Due to the size of the datasets, they could not be uploaded. 3000 images were captured but due to limitaions of RAM (4 GB), only 1200 could be used for training and 200 for cross validation.
