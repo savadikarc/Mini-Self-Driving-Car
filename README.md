@@ -26,7 +26,7 @@ PySerial version 3.2.1 for Serial Communication between Laptop and Arduino via t
 Specifications of FNN:
 
 1. Number of input units - 25344 + bias = 25355.
-2. Number of hidden layer(s) - 1 having 50 neurons.
+2. Number of hidden layer(s) - 1 having 30 neurons.
 3. Number of output classes - 5 (Forward, Backward, Left, Right, Stop).
 
 Codes:
