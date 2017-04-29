@@ -6,7 +6,7 @@ Hardware Used:
   2. HC05 Bluetooth Module
   3. TowerPro MG995 Servo Motor
   4. BO type DC motor
-  5. Power derived from 1000mAh Lithium Polymer Battery.
+  5. Power derived from 1000mAh Lithium Polymer Battery
   6. L298 Motor Driver module
 
 The codes have been written in Python 3.4.3 
@@ -23,9 +23,9 @@ PySerial version 3.2.1 for Serial Communication between Laptop and Arduino via t
 
 Specifications of FNN:
 
-1. Number of input units - 25344 + bias = 25355
-2. Number of hidden layer(s) - 1 having 50 neurons
-3. Number of output classes - 5 (Forward, Backward, Left, Right, Stop)
+1. Number of input units - 25344 + bias = 25355.
+2. Number of hidden layer(s) - 1 having 50 neurons.
+3. Number of output classes - 5 (Forward, Backward, Left, Right, Stop).
 
 Codes:
 
