@@ -61,17 +61,17 @@ class NN(object):
         while loss > 0.01:
 
             #Regularization Terms
-            reg1 = np.copy(w1)#30x25344
-            reg1[:, 0] = 0#30x25344
+            reg1 = np.copy(w1)
+            reg1[:, 0] = 0
             reg1s = np.sum(np.square(reg1))
-            reg2 = np.copy(w2)#5x31
-            reg2[:, 0] = 0#5x31
+            reg2 = np.copy(w2)
+            reg2[:, 0] = 0
             reg2s = np.sum(np.square(reg2))
 
             #Forward Pass on Training Set
-            a = np.dot(self.X, w1.T)#mx25344, 25344x30 = mx30
-            score1[:, 1:] = self.sigmoid(a)#mx30
-            b = np.dot(score1, w2.T)#mx31, 31x5 = mx5
+            a = np.dot(self.X, w1.T)
+            score1[:, 1:] = self.sigmoid(a)
+            b = np.dot(score1, w2.T)
             score2 = self.sigmoid(b)
 
             #Forward Pass on CV Set
@@ -88,11 +88,11 @@ class NN(object):
             lossCross = self.lossFunc(score2Cross, mCross, self.yCross)
 
             #RMSProp
-            grad2 = (-1*(self.y - score2))#mx10
-            dw2 = np.dot(grad2.T, score1) + ((lam/(m))*reg2)#5xm, mx31 = 5x31
-            grad1 = np.dot(grad2, w2[:, 1:])#mx5, 5x30 = mx30
-            grad0 = grad1 * score1[:, 1:] *(1 - score1[:, 1:])#mx30, mx30
-            dw1 = np.dot(grad0.T, self.X) + ((lam/(m))*reg1)#30xm, mx25344 = 30x25344
+            grad2 = (-1*(self.y - score2))
+            dw2 = np.dot(grad2.T, score1) + ((lam/(m))*reg2)
+            grad1 = np.dot(grad2, w2[:, 1:])
+            grad0 = grad1 * score1[:, 1:] *(1 - score1[:, 1:])
+            dw1 = np.dot(grad0.T, self.X) + ((lam/(m))*reg1)
 
             #Weight Update
             cache1 = decay_rate*cache1 + (1 - decay_rate) * dw1**2
@@ -142,9 +142,9 @@ class NN(object):
         m = self.XCross.shape[0]
         score1 = np.zeros((m, 30))
         score1 = np.concatenate((np.ones((m, 1)), score1), axis = 1)
-        a = np.dot(self.XCross, w1.T)#mx25344, 25344x30 = mx30
-        score1[:, 1:] = self.sigmoid(a)#mx30
-        b = np.dot(score1, w2.T)#mx31, 31x5 = mx5
+        a = np.dot(self.XCross, w1.T)
+        score1[:, 1:] = self.sigmoid(a)
+        b = np.dot(score1, w2.T)
         score2 = self.sigmoid(b)
         pred = np.argmax(score2, axis = 1)
         val = np.zeros((m, 1))
