@@ -2,9 +2,13 @@
 Python version 3.4.3
 Dependencies
 --NumPy version 1.11.2
+
 --Pillow version 3.4.2
+
 --PyBluez version 0.22
+
 --PySerial version 3.2.1
+
 --Additionally, Android app 'IPWebcam'
 
 Hardware Used:
@@ -15,12 +19,6 @@ Hardware Used:
   4. BO type DC motor
   5. Power derived from 1000mAh Lithium Polymer Battery
   6. L298 Motor Driver module
-
-Specifications of FNN:
-
-1. Number of input units - 25344 + bias = 25355.
-2. Number of hidden layer(s) - 1 having 30 neurons.
-3. Number of output classes - 5 (Forward, Backward, Left, Right, Stop).
 
 Codes:
 
