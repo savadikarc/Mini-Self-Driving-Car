@@ -1,4 +1,13 @@
 # Mini-Self-Driving-Car
+Python version 3.4.3
+Dependencies
+--NumPy version 1.11.2
+
+--Pillow version 3.4.2
+
+--PyBluez version 0.22
+
+--PySerial version 3.2.1
 
 Hardware Used:
 
@@ -12,16 +21,6 @@ Hardware Used:
 The codes have been written in Python 3.4.3 
 
 A free Android app called 'IPWebcam' has been used to capture images. IPWebcam captures images via the mobile camera and sends them as a bytestream to requesting device.
-
-NumPy version 1.11.2 for matrix computations.
-
-Pillow version 3.4.2 for handling images.
-
-urllib for connection to the mobile (IPWebcam) via WiFi. 
-
-PyBluez version 0.22 for Bluetooth interfacing of Laptop and HC05.
-
-PySerial version 3.2.1 for Serial Communication between Laptop and Arduino via type B USB cable.
 
 Specifications of FNN:
 
