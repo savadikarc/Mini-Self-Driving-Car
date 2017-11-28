@@ -52,9 +52,9 @@ while True:
     print(cnt)
     img = np.reshape(i1, (1, 25344))
     img = np.concatenate((np.ones((1, 1)), img), axis = 1)
-    a = np.dot(img, w1.T)#mx25344, 25344x30 = mx30
-    score1[:, 1:] = net.sigmoid(a)#mx30
-    b = np.dot(score1, w2.T)#mx31, 31x5 = mx5
+    a = np.dot(img, w1.T)
+    score1[:, 1:] = net.sigmoid(a)
+    b = np.dot(score1, w2.T)
     score2 = net.sigmoid(b)
     cmmd = np.argmax(score2)
     command = str(cmmd)
